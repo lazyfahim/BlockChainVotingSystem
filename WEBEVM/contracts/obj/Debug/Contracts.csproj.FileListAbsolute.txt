@@ -1,0 +1,5 @@
+C:\Users\lazyfahim\source\repos\ChatApp\contracts\bin\Debug\contracts.dll
+C:\Users\lazyfahim\source\repos\ChatApp\contracts\bin\Debug\contracts.pdb
+C:\Users\lazyfahim\source\repos\ChatApp\contracts\obj\Debug\contracts.csproj.CoreCompileInputs.cache
+C:\Users\lazyfahim\source\repos\ChatApp\contracts\obj\Debug\contracts.dll
+C:\Users\lazyfahim\source\repos\ChatApp\contracts\obj\Debug\contracts.pdb

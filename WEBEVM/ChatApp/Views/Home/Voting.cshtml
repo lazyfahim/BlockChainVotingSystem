@@ -1,0 +1,128 @@
+﻿@using Microsoft.AspNet.Identity
+@model Model.Election
+
+@{
+    ViewBag.Title = "Voting";
+}
+
+<h2>Voting</h2>
+
+<div>
+    <div class="form-horizontal">
+        <form id="form">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(m => m.Id, new { @Name = "elec_id" })
+            @Html.HiddenFor(m => m.Id, new { @Name = "voter_id", @Value = User.Identity.GetUserId() })
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @Html.Label("Select Nominee for President")
+                    <select class="form-control" id="PresidentDrop" name="pre"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @Html.Label("Select Nominee for Vice-President")
+                    <select class="form-control" id="ViceDrop" name="vice"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @Html.Label("Select Nominee for Genral-Secratary")
+                    <select class="form-control" id="SecDrop" name="sec"></select>
+                </div>
+            </div>
+
+
+            <div class="form-group" id="voteform">
+                <div class="col-md-offset-2 col-md-10">
+                    <input id="voted" type="submit" value="Vote" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@section scripts{
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            function getUserName(Id) {
+                console.log(Id);
+                var data;
+
+
+                $.ajax({
+                    url: '/api/Users/' + Id,
+                    type: 'GET', // this is default, but worth pointing out
+                    success: function (resp) {
+                        console.log("test"+resp);
+                        //data = resp.UserName;
+                        return resp;
+                    }
+                });
+               
+            }
+
+            console.log('hello', getUserName("39126e71-9857-4991-8a04-e23063086526"));
+            $.ajax({
+                type: "GET",
+                url: "http://10.10.0.77:8000/getnomresult/"+"@Model.Id",
+                success: function (data) {
+                    var president = '<option value="-1">please select President</option>';
+                    var vicePresident = '<option value="-1">please select VicePresident</option>';
+                    var secretary = '<option value="-1">please select Secretary</option>';
+                    for (var i = 0; i < data["pres"].length; i++) {
+                        console.log(data["pres"][i]);
+                        president += '<option value="' + data["pres"][i] + '">' + getUserName(data["pres"][i].toString()) + '</option>';
+                        console.log(president);
+                    }
+                    for (var i = 0; i < data["vp"].length; i++) {
+                        vicePresident += '<option value="' + data["vp"][i] + '">' + getUserName(data["vp"][i].toString()) + '</option>';
+                    }
+                    for (var i = 0; i < data["sec"].length; i++) {
+                        secretary += '<option value="' + data["sec"][i] + '">' + getUserName(data["sec"][i].toString()) + '</option>';
+                    }
+                    $("#PresidentDrop").html(president);
+                    $("#ViceDrop").html(vicePresident);
+                    $("#SecDrop").html(secretary);
+                }
+            });
+            
+            $.ajax({
+                type: "GET",
+                url: "http://10.10.0.77:8000/testvote/" + "@Model.Id" + "/" + "@User.Identity.GetUserId()" + "/",
+                success  : function(data) {
+
+                    var vali = data["success"].toString();
+                    if (vali === "false") {
+                        $("input[type=submit]").attr("disabled", "disabled");
+                        alert("Your vote has done");
+                    }
+                }
+            });
+
+
+            $('form').on('submit',function(e){
+                e.preventDefault();
+                $.ajax({
+                    type     : "POST",
+                    cache    : false,
+                    url: "http://10.10.0.77:8000/testvote/" + "@Model.Id" + "/" + "@User.Identity.GetUserId()" +"/",
+                    dataType: 'json',
+                    data: JSON.stringify($(this).serializeArray()),
+                    success  : function(data) {
+                        location.reload();
+                    }
+                });
+
+            });
+
+        });
+
+    </script>
+}

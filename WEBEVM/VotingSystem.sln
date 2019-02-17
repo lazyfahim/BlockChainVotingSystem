@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVM", "ChatApp\EVM.csproj", "{F3084158-BF52-4C91-9FBA-F6825F3FBD88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "persistence", "persistence", "{CCC7C5EB-93AF-4135-B717-E67F6C1C319E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "contracts\Contracts.csproj", "{4747F98E-12A0-4B58-AFC4-32E444903A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{D13AE62E-3B73-43B3-B4CF-420B03E788B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{893DB430-198C-4DC6-A9A9-E7446B519459}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3084158-BF52-4C91-9FBA-F6825F3FBD88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3084158-BF52-4C91-9FBA-F6825F3FBD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3084158-BF52-4C91-9FBA-F6825F3FBD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3084158-BF52-4C91-9FBA-F6825F3FBD88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4747F98E-12A0-4B58-AFC4-32E444903A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4747F98E-12A0-4B58-AFC4-32E444903A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4747F98E-12A0-4B58-AFC4-32E444903A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4747F98E-12A0-4B58-AFC4-32E444903A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13AE62E-3B73-43B3-B4CF-420B03E788B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13AE62E-3B73-43B3-B4CF-420B03E788B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13AE62E-3B73-43B3-B4CF-420B03E788B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13AE62E-3B73-43B3-B4CF-420B03E788B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893DB430-198C-4DC6-A9A9-E7446B519459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893DB430-198C-4DC6-A9A9-E7446B519459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893DB430-198C-4DC6-A9A9-E7446B519459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893DB430-198C-4DC6-A9A9-E7446B519459}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4747F98E-12A0-4B58-AFC4-32E444903A5A} = {CCC7C5EB-93AF-4135-B717-E67F6C1C319E}
+		{D13AE62E-3B73-43B3-B4CF-420B03E788B5} = {CCC7C5EB-93AF-4135-B717-E67F6C1C319E}
+		{893DB430-198C-4DC6-A9A9-E7446B519459} = {CCC7C5EB-93AF-4135-B717-E67F6C1C319E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D10E226-E2DD-4730-BE9F-43F01A23056E}
+	EndGlobalSection
+EndGlobal

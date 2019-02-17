@@ -1,0 +1,15 @@
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\Model.dll
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\Model.pdb
+C:\Users\lazyfahim\source\repos\ChatApp\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\lazyfahim\source\repos\ChatApp\Model\obj\Debug\Model.dll
+C:\Users\lazyfahim\source\repos\ChatApp\Model\obj\Debug\Model.pdb
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\Model.dll.config
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\EntityFramework.dll
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\EntityFramework.xml
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\lazyfahim\source\repos\ChatApp\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\lazyfahim\source\repos\ChatApp\Model\obj\Debug\Model.csproj.CopyComplete
